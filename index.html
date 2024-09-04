@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fuente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Frontend Mentor | Todo app</title>
+
+
+</head>
+
+<body class="">
+
+  <main class="container">
+
+    <div class="main-todo">
+      <h1 class="title">TODO</h1>
+      <button id="theme-switch">
+        <img src="images/icon-moon.svg" class="theme-switch__moon">
+        <img src="images/icon-sun.svg" class="theme-switch__sun">
+      </button>
+      <!-- <figure class="main-picture">
+        <img class="main-sun" src="images/icon-moon.svg">
+      </figure> -->
+    </div>
+
+    <div class="add-task">
+      <div class="add-task__inputs">
+        <input class="add-task__task-status" type="checkbox">
+        <input class="add-task__new-task" type="text" placeholder="Create a new todo...">
+      </div>
+    </div>
+
+    <div class="tasks__container tasks">
+
+      <!-- task -->
+      <template id="template-task">
+        <div class="task task-status" data-state="incomplete">
+          <div class="task__elements">
+            <input type="checkbox" class="task__checked">
+            <p class="task__name">Tarea</p>
+          </div>
+          <!-- <figure class="task__delete-task"> -->
+          <img src="images/icon-cross.svg" class="delete-task">
+          <!-- </figure> -->
+        </div>
+      </template>
+      <!-- task -->
+
+      <div class="tasks-footer">
+
+        <div class="tasks-left">
+          <p class="tasks-left__item-left tasks-footer__text">0 items left</p>
+        </div>
+
+        <div class="tasks-filter">
+          <p class="tasks-footer__text filter" id="all" data-value="all">All</p>
+          <p class="tasks-footer__text filter" id="active" data-value="active">Active</p>
+          <p class="tasks-footer__text filter" id="completed" data-value="completed">Completed</p>
+        </div>
+
+        <div class="tasks-clear">
+          <p class="tasks-footer__text" id="clear">Clear</p>
+          <p class="tasks-footer__text" id="complete-all" style="display: none;">Completed</p>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+
+  <script src="app.js"></script>
+</body>
+
+</html>
